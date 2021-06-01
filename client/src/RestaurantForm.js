@@ -11,22 +11,17 @@ const RestaurantForm = (props) => {
     e.preventDefault()
     try{
       if(id){
-        console.log(id)
         let res = await axios.put(`/api/restaurants/${id}`, {name})
-        
-        console.log('hit edit', res.data)
         editRestaurant(res.data)
-        console.log('after edit', res.data)
       } else {
         let res = await axios.post('/api/restaurants', {name})
-        console.log(res.data)
         addRestaurant(res.data)
+        setName('')
       }
     } catch (err) {
       alert('err check console')
       console.log(err)
     }
-    setName('')
   }
 
   return (
