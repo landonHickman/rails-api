@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import RestaurantForm from './RestaurantForm'
 
 const Restaurant = (props) => {
-  const {name, editRestaurant} = props 
+  const {id, name, editRestaurant, deleteRestaurant} = props 
+  const [showForm, setShowForm] = useState(false)
   return (
     <>
       <h2>{name}</h2>
-      <RestaurantForm {...props} editRestaurant={editRestaurant}/>
+      <button onClick={()=>{setShowForm(!showForm)}}>Edit Form</button>
+      <button onClick={()=>deleteRestaurant(id)}>Delete</button>
+      {showForm && <RestaurantForm {...props} editRestaurant={editRestaurant}/>}
     </>
   )
 }

@@ -4,6 +4,8 @@ import React, {useState} from 'react'
 const RestaurantForm = (props) => {
   const {id, editRestaurant, addRestaurant} = props
   const [name, setName] = useState(props.name ? props.name : '')
+ 
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
