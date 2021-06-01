@@ -28,8 +28,8 @@ const Restaurants = (props) => {
   }
 
   const editRestaurant = (res) => {
-    let updatedRestaurant = restaurants.map(r => r.id === res.id ? res.id : r)
-    setRestaurants(updatedRestaurant)
+    let updatedRes = restaurants.map(r => r.id === res.id ? res : r)
+    setRestaurants(updatedRes)
   }
   
   const deleteRestaurant = async (id) => {

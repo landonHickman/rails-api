@@ -10,6 +10,7 @@ function App() {
     <>
       <Switch>
         <Route exact path='/' component={Restaurants}/>
+        
       </Switch>
     </>
   );
