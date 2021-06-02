@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Restaurant.destroy_all
 
-Restaurant.create(name: 'AppleBees')
-Restaurant.create(name: 'Betos')
-Restaurant.create(name: "Mo'Bethas")
-Restaurant.create(name: "Olive Garden")
-Restaurant.create(name: "Outback Steak House")
+Restaurant.create(name: 'AppleBees', about: 'Good')
+Restaurant.create(name: 'Betos', about: 'Very Good')
+Restaurant.create(name: "Mo'Bethas", about: 'The Best')
+Restaurant.create(name: "Olive Garden", about: 'Sweet')
+Restaurant.create(name: "Outback Steak House", about: 'Chewy')
 
 puts "seeded #{Restaurant.all.size}"
