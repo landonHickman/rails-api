@@ -56,6 +56,7 @@ const Restaurants = (props) => {
     <div className="App">
       <h1>Restaurants</h1>
       <button onClick={()=>{setShowForm(!showForm)}}>Add Form</button>
+      <hr/>
       {showForm && <RestaurantForm addRestaurant={addRestaurant}/>}
       {renderRestaurants()}
     </div>

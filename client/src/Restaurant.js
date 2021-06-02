@@ -7,10 +7,10 @@ const Restaurant = (props) => {
   return (
     <>
       <h2>{name}</h2>
-      
       <button onClick={()=>{setShowForm(!showForm)}}>Edit Form</button>
       <button onClick={()=>deleteRestaurant(id)}>Delete</button>
       {showForm && <RestaurantForm {...props} editRestaurant={editRestaurant}/>}
+      <hr/>
     </>
   )
 }
